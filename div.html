@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Roasted Chicken</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e67e22;
+            --secondary: #d35400;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            position: relative;
+            height: 70vh;
+            overflow: hidden;
+        }
+        
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+        
+        .overlay h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        
+        .order-form {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+        
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .option {
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .option input[type="radio"] {
+            display: none;
+        }
+        
+        .option label {
+            display: block;
+            padding: 15px;
+            background-color: var(--light);
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .option input[type="radio"]:checked + label {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .video-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .overlay h1 {
+                font-size: 2rem;
+            }
+            
+            .options {
+                flex-direction: column;
+            }
+            
+            .option {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="slider">
+            <div class="slide active" style="background-image: url('chickenPlate.jpg');"></div>
+            <div class="slide" style="background-image: url('chickenRoast.jpg');"></div>
+        </div>
+        <div class="overlay">
+            <h1>Get The Delicious Roasted Chicken Right At Your Door</h1>
+            
+        </div>
+    </header>
+<div class="video-container">
+            <img src="C:\Users\uk354\OneDrive\Desktop\chickenPalace\Money_Quest (1).jpg">
+                                             
+        </div>
+
+
+<div class="video-container" style="max-width: 500px; margin: 0 auto;">
+    <video controls width="100%">
+        <source src="mickeyMouse.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    
+    <div class="container">
+        <div class="order-form">
+            <div class="form-group">
+                <h3>Have you Name</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="name1" name="name" value="Flake">
+                        <label for="name1">Flake</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="name2" name="name" value="Wine Salad">
+                        <label for="name2">Wine Salad</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="name3" name="name" value="With Sale">
+                        <label for="name3">With Sale</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <h3>Choose the name:</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="size1" name="size" value="Whole">
+                        <label for="size1">Whole</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="size2" name="size" value="Half">
+                        <label for="size2">Half</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <h3>Choose the model of delivery:</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="delivery1" name="delivery" value="Complete">
+                        <label for="delivery1">Complete</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="delivery2" name="delivery" value="Branded Products">
+                        <label for="delivery2">Branded Products</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <script>
+        // Image slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Button click handler
+        document.querySelector('.btn').addEventListener('click', function() {
+            alert('Your quest for delicious chicken has begun!');
+        });
+    </script>
+</body>
+</html>
